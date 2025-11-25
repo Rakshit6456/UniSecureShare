@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = "force-dynamic";
 import { FiUpload, FiTag } from "react-icons/fi";
 import { FaFileLines } from "react-icons/fa6";
 import { IoBookOutline } from "react-icons/io5";
@@ -279,4 +280,5 @@ export default function UploadPage() {
       </div>
     </div>
   );
+
 }

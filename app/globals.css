@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #fcf8f5;
+  --pBlack: #080204;
+  --darkShade: #f2ece6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-poppins: var(--font-poppins);
+  --font-averia: var(--font-averia)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fefefe;
+  }
+}
+
+.Averia {
+  font-family: var(--font-averia);
+}
+
+body {
+  background: var(--primary);
+  font-family: var(--font-poppins);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+.classCon::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-btn {
+  @apply w-full cursor-pointer text-left px-2 py-2 rounded-full bg-[var(--primary)] hover:bg-[var(--pBlack)]/90 hover:text-[var(--primary)] transition-all duration-150;
+}
+
+.sidebar-active {
+  @apply bg-[var(--pBlack)] text-[var(--primary)] font-medium shadow-md;
+}
+
+.class-btn {
+  @apply w-full cursor-pointer text-left text-[var(--pBlack)] px-3 py-2.5 rounded-full bg-[var(--primary)] hover:bg-[var(--pBlack)]/90 hover:text-[var(--primary)] transition-all duration-150;
+}
+
+.class-active {
+  @apply w-full cursor-pointer text-[var(--primary)] text-left px-3 py-2.5 rounded-full bg-[var(--pBlack)] hover:bg-[var(--pBlack)]/90 transition-all duration-150 font-medium;
+}
